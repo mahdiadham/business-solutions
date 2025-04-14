@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        background: url("../../../assets/images/background.png");
+        background-size: cover;
+    }
+    #side-bar-menu {
+        background: url("../../../assets/images/background.png");
+        background-size: cover;
+    }
+    @font-face {
+        font-family: "DM Sans Regular";
+        src: url("../../../assets/fonts/DM-Sans/static/DMSans-Regular.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "DM Sans Medium";
+        src: url("../../../assets/fonts/DM-Sans/static/DMSans-Medium.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "DM Sans Bold";
+        src: url("../../../assets/fonts/DM-Sans/static/DMSans-Bold.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Rubik Regular";
+        src: url("../../../assets/fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Rubik Medium";
+        src: url("../../../assets/fonts/Rubik/static/Rubik-Medium.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Roboto Regular";
+        src: url("../../../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+        font-display: swap;
+    }
+}
+
+@layer components {
+    .service-profile {
+        @apply w-[74px] h-[74px] rounded-full flex justify-center items-center;
+    }
+    .service-items {
+        @apply flex flex-col justify-center items-center gap-y-5 px-6 w-[310px] h-80 xl:w-[370px] xl:h-[336px] rounded-[34px] border border-solid border-[#ffffff14] bg-gradient-to-br from-[#fefeff08] from-[-11.04%] to-[#ffffff05] to-[104.89%] shadow-normal;
+    }
+    .read-more {
+        @apply w-[100px] h-8 rounded capitalize text-white text-sm font-dmSansRegular flex justify-center items-center bg-gradient-to-r from-blue-600 from-[0.36%] to-fuchsia-500 to-[201.02%];
+    }
+    .team-members {
+        @apply w-[270px] h-[270px] p-1 flex flex-col justify-center items-center gap-y-2.5 rounded-[34px] border border-solid border-[#ffffff14] bg-gradient-to-br from-[#fefeff08] from-[-11.04%] to-[#ffffff05] to-[104.89%] shadow-normal lg:cursor-pointer lg:hover:scale-105 lg:transition-all;
+    }
+    .social-media {
+        @apply flex justify-center items-center gap-x-3;
+    }
+    .link-hover {
+        @apply lg:hover:text-indigo-500 lg:transition-colors;
+    }
+    .footer-item {
+        @apply text-lg text-white opacity-80 font-dmSansRegular leading-[40px] tracking-[0.18px] flex flex-col justify-center items-start capitalize lg:child-hover:text-indigo-500 lg:child:transition-colors;
+    }
+    .contact-input::placeholder {
+        @apply text-xs xs:text-sm;
+    }
+}
